@@ -1,3 +1,5 @@
 port=80
 readiness_path="/"
 #auto_deploy_env="prod"
+[build]
+build_in_kubernetes = true
