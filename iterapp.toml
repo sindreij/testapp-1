@@ -1,3 +1,4 @@
 readiness_path="/"
 
 [postgres]
+feature_auto_create_db=true
