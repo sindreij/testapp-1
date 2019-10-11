@@ -1,0 +1,21 @@
+{
+    "name": "testapp",
+    "version": "1.0.0",
+    "description": "Testapp for iterapp",
+    "main": "src/index.js",
+    "repository": "git@github.com:iterate/testapp.git",
+    "author": "Sindre Ilebekk Johansen <sindre@iterate.no>",
+    "license": "UNLICENSED",
+    "private": true,
+    "dependencies": {
+        "dotenv": "^8.1.0",
+        "express": "^4.17.1",
+        "pg": "^7.12.1"
+    },
+    "scripts": {
+        "start": "nodemon src/index.js"
+    },
+    "devDependencies": {
+        "nodemon": "^1.19.3"
+    }
+}

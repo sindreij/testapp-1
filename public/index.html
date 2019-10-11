@@ -1,20 +1,54 @@
-Hello World!!
+<!DOCTYPE html>
 
-This is a testi!!
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
 
-YOYOYO
+        <title>Testapp</title>
 
-YYYYiYYYY
+        <style></style>
+    </head>
 
-Hei verden 812356789
+    <body>
+        <div id="messages"></div>
+        <form action="#" id="sendform"><input id="message" /><button>Send</button></form>
+    </body>
 
-La oss se om det virker som det skal.
+    <script>
+        async function main() {
+            let res = await fetch('/api/messages');
+            if (!res.ok) {
+                throw Error(`${res.status}: ${res.statusText}`);
+            }
+            let data = await res.json();
 
-123456789
+            let parent = document.getElementById('messages');
+            data.forEach(({ text }) => {
+                let div = document.createElement('div');
+                div.innerText = text;
+                parent.appendChild(div);
+            });
 
-Se om dette virker som det skal
+            async function onSubmit(event) {
+                event.preventDefault();
+                let message = document.getElementById('message').value;
+                let res = await fetch('/api/messages', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({ message }),
+                });
+                if (!res.ok) {
+                    throw Error(`${res.status}: ${res.statusText}`);
+                }
+            }
 
-Med postgresql kanskje?....
+            document.getElementById('sendform').addEventListener('submit', (event) => {
+                onSubmit(event).catch(console.error);
+            });
+        }
 
-lol
-asd
+        main().catch(console.error);
+    </script>
+</html>
