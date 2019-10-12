@@ -6,7 +6,15 @@
 
         <title>Testapp</title>
 
-        <style></style>
+        <style>
+            input {
+                display: block;
+                margin-bottom: 16px;
+            }
+            label {
+                display: block;
+            }
+        </style>
     </head>
 
     <body>
@@ -15,7 +23,7 @@
     </body>
 
     <script>
-        async function main() {
+        async function reload() {
             let res = await fetch('/api/messages');
             if (!res.ok) {
                 throw Error(`${res.status}: ${res.statusText}`);
@@ -23,30 +31,42 @@
             let data = await res.json();
 
             let parent = document.getElementById('messages');
+            parent.innerHTML = '';
             data.forEach(({ text }) => {
                 let div = document.createElement('div');
                 div.innerText = text;
                 parent.appendChild(div);
             });
+        }
 
-            async function onSubmit(event) {
-                event.preventDefault();
-                let message = document.getElementById('message').value;
-                let res = await fetch('/api/messages', {
-                    method: 'POST',
-                    headers: {
-                        'Content-Type': 'application/json',
-                    },
-                    body: JSON.stringify({ message }),
-                });
-                if (!res.ok) {
-                    throw Error(`${res.status}: ${res.statusText}`);
-                }
+        async function onSubmit(event) {
+            event.preventDefault();
+            let input = document.getElementById('message');
+            let message = input.value;
+            let res = await fetch('/api/messages', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({ message }),
+            });
+            if (!res.ok) {
+                throw Error(`${res.status}: ${res.statusText}`);
             }
+            input.value = '';
+            await reload();
+        }
 
-            document.getElementById('sendform').addEventListener('submit', (event) => {
+        async function main() {
+            document.getElementById('sendform').addEventListener('submit', event => {
                 onSubmit(event).catch(console.error);
             });
+
+            await reload();
+
+            setInterval(() => {
+                reload().catch(console.error);
+            }, 2000);
         }
 
         main().catch(console.error);
