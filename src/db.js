@@ -7,7 +7,7 @@ async function connect() {
     try {
         await client.connect();
 
-        client.on('error', (err) => {
+        client.on('error', err => {
             console.error('database error', err.stack);
         });
     } catch (err) {
@@ -18,7 +18,30 @@ async function connect() {
     return client;
 }
 
+function sleep(ms) {
+    return new Promise(resolve => setTimeout(resolve, ms));
+}
+
 async function initDb() {
+    // Postgres DB might not be up at the same time our container is up,
+    // so we need to retry this a few times
+    let retry = 10;
+    while (true) {
+        try {
+            await doInitDb();
+            return;
+        } catch (err) {
+            console.error(err.message);
+            if (retry === 0) {
+                throw err;
+            }
+        }
+        retry -= 1;
+        await sleep(3000);
+    }
+}
+
+async function doInitDb() {
     let conn = await connect();
 
     try {

@@ -10,7 +10,10 @@ const app = express();
 
 app.use(express.json());
 
-db.initDb().catch(console.error);
+db.initDb().catch(err => {
+    console.error(err);
+    process.exit(1);
+});
 
 // Routes
 
@@ -18,7 +21,7 @@ app.get('/', (req, res) => res.sendFile('index.html', { root: __dirname + '/../p
 
 app.get('/api/messages', (req, res, next) => {
     db.getMessages()
-        .then((messages) => res.json(messages))
+        .then(messages => res.json(messages))
         .catch(next);
 });
 
