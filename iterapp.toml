@@ -3,3 +3,7 @@ readiness_path="/"
 #auto_deploy_env="prod"
 [build]
 build_in_kubernetes = true
+
+[[files.common]]
+mount_path= "/usr/share/nginx/html"
+secret = "pages"
