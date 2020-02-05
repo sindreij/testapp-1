@@ -1,5 +1,9 @@
 port=80
 readiness_path="/"
 #auto_deploy_env="prod"
+
+[env.common]
+MY_SECRET = { encrypted = "GS_oVmyJUReeJGcKUSJPpk90HWYc1MM0jKB96cIC8Uhj030yPIPcSBm3dYuheW2czShEeIUaZZPo7YGNZRu_1X6TlN3OOl81sbcCLV-x5ouAn0Or6LA9-s9aLcrvFBxNTjtFyIXBxqFKuyFE78t9" }
+
 [build]
 build_in_kubernetes = true
