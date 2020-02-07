@@ -1,5 +1,2 @@
-port=80
-readiness_path="/"
-#auto_deploy_env="prod"
-[build]
-build_in_kubernetes = true
+[env.common]
+MY_NOT_SO_SECRET = { encrypted = "GbIg-Imtjec82mfiUIuI5g2J7BB2pdreSQg40EpyOmpbWJ9IWY-Fhm9kzR7_Muei1TMS89op751z1xjYjcH7vfsTSQJksJ5fl3DEZHC0LdX97xYPeR-RDVOwajd8WlDI14NsB1Dna9wcpmSQOp6GJjKBXog34TGtRuAzet88oB0FzQ5hEGOOkWpt2H3M-L6USVkMnbSG5AzQWYJqdtSYA6Idl-zGT2EY8IXXf3nEMmBNAvraAqXN" }
