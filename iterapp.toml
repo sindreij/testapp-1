@@ -5,5 +5,10 @@ readiness_path="/"
 [env.common]
 YOUR_ENVIRONMENT_VARIABLE = { encrypted = "yUwudnldnO0YHP79-Xx091g3ITYVdNIZPa-guBkczRFG4wq3DSPJJ1KQvbDk_kR0RyPN6GsqBViv0N3Q4EgHqzD8Zw3C1qhfPj6ypDvcNKJiFUZ_Q-EM9o_OxoBm2rMrm9PLbC5k64lOhNFaVWcy3P9ZSp-FLydgHMXAlTdaOQ" }
 
+
+[[files.common]]
+mount_path="/app/secrets"
+"filename.extension" = { encrypted = "Ix1EgZSHKJFFkr9h3_5igDSDvimLkqI63B3e3HkSrV-NK4GDCAEjJTKEQNDmoKHHT8gliR10ceSmNwRMQ_BoBzuQ_4eMSIrwC2_Ru5JcTz6U1jsmbRwMs9pz1YyF5bmZKuNMAQbNxFX9m_nNN3Y" }
+
 [build]
 build_in_kubernetes = true
