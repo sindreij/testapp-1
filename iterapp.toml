@@ -3,7 +3,7 @@ readiness_path="/"
 #auto_deploy_env="prod"
 
 [env.common]
-MY_SECRET = { encrypted = "GS_oVmyJUReeJGcKUSJPpk90HWYc1MM0jKB96cIC8Uhj030yPIPcSBm3dYuheW2czShEeIUaZZPo7YGNZRu_1X6TlN3OOl81sbcCLV-x5ouAn0Or6LA9-s9aLcrvFBxNTjtFyIXBxqFKuyFE78t9" }
+YOUR_ENVIRONMENT_VARIABLE = { encrypted = "YAB0Kr10UF0KMVg9evejiuvcoPn8X2lzVsSGv6yyTjn3B1af-X_mWXqa38nio6Mug-UOXnN7TrBhD-kBOOJQurKBg3-kGNh9KhyKewJ-i6W95qD3I1npN2bYz3zI7VubVz7TVhXOa9KO61YHLU1J2mbl" }
 
 [build]
 build_in_kubernetes = true
