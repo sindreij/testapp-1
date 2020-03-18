@@ -1,5 +1,5 @@
 port=80
 readiness_path="/"
-#auto_deploy_env="prod"
+from_to_www_redirect=true
 [build]
 build_in_kubernetes = true
