@@ -1,6 +1,5 @@
 port=80
 readiness_path="/"
 from_to_www_redirect=true
-domains=["helloworldthisisatest.test.iterate.no"]
 [build]
 build_in_kubernetes = true
