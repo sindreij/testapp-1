@@ -25,6 +25,12 @@ app.get('/api/messages', (req, res, next) => {
         .catch(next);
 });
 
+app.get('/api/cronjob', (req, res, next) => {
+    console.log('Cronjob called');
+    console.log(req.headers);
+    res.send('okay');
+});
+
 app.post('/api/messages', (req, res, next) => {
     db.postMessage(req.body.message)
         .then(() => {

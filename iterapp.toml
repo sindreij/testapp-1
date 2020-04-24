@@ -1,3 +1,10 @@
 readiness_path="/"
 
 [postgres]
+
+[cronjobs.test-cronjob]
+    schedule="* * * * *"
+    path="/api/cronjob"
+
+    [cronjobs.test-cronjob.headers]
+        Authorization = "Bearer asdf123"
