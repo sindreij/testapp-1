@@ -1,5 +1,6 @@
 port=80
 readiness_path="/"
 from_to_www_redirect=true
+emoji="🧪"
 [build]
 build_in_kubernetes = true
