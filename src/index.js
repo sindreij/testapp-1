@@ -11,11 +11,11 @@ app.use(express.json());
 // Routes
 
 app.get('/', (req, res) => {
-    res.send('Hello world');
+    res.send(`${new Date()}: Hello world (${process.env.ITERAPP_BUILD_NUMBER})`);
 });
 
 app.get('/api/cronjob', (req, res, next) => {
-    console.log('${new Date()}: Cronjob called. ');
+    console.log(`${new Date()}: Cronjob called. (${process.env.ITERAPP_BUILD_NUMBER})`);
     console.log(req.headers);
     res.send('okay');
 });
