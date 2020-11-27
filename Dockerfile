@@ -14,7 +14,6 @@ COPY package.json .
 COPY yarn.lock .
 RUN yarn install --pure-lockfile
 
-COPY public public
 COPY src src
 
 EXPOSE 3030
