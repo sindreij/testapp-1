@@ -16,6 +16,7 @@ app.get('/health', (req, res) => {
 
 app.get('/', (req, res) => {
     res.send(`${new Date()}: Hello world (${process.env.ITERAPP_BUILD_NUMBER})`);
+    console.log(`${new Date()}: Hello world (${process.env.ITERAPP_BUILD_NUMBER})`);
 });
 
 app.get('/api/cronjob', (req, res, next) => {
