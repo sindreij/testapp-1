@@ -10,6 +10,10 @@ app.use(express.json());
 
 // Routes
 
+app.get('/health', (req, res) => {
+    res.send('ok');
+});
+
 app.get('/', (req, res) => {
     res.send(`${new Date()}: Hello world (${process.env.ITERAPP_BUILD_NUMBER})`);
 });
