@@ -2,6 +2,8 @@ require('dotenv').config();
 
 const express = require('express');
 
+console.log(`App started ${process.env.ITERAPP_BUILD_NUMBER}`);
+
 // Init app
 
 const app = express();
