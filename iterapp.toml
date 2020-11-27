@@ -1,7 +1,3 @@
-readiness_path="/"
-
-[postgres]
-
 [cronjobs.test-cronjob]
     schedule="* * * * *"
     path="/api/cronjob"
