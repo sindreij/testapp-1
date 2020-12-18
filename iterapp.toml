@@ -5,5 +5,5 @@ emoji="🧪"
 [build]
 build_in_kubernetes = true
 
-[build-secret.my-secret]
+[build_secrets.my-secret]
 "test.txt" = { encrypted = "A0YLKpVCSluBBCwt0eQr-OZp25P28I0LOZyMevJoEB1ocMw70QL9ALlVyjKzR7-JRo9ZycCtjE3PDyWKRFtGvUBUXnzM5qPcjnS_5e3W1HY2eeSMiiLm0bkhX8PunuBbL7Mulrw30tcrQPv9iUaFPRAzDHD5D21WolYKBBtoUKo" }
