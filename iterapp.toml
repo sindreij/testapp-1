@@ -4,4 +4,4 @@ from_to_www_redirect=true
 emoji="🧪"
 
 [build_secrets]
-"my-secret" = { encrypted = "TeCfUZ8f_QGd4nl5QCN3Ol_N1xUOPJVKZ92hffWLTUUvoPVAhHPVDVuV5JjCD6SgI3P-5zLNduu2o_NpYWs6FAARf86dfutSqSc0a-2Fa3dVUeI-zxV78eOJEky6mmt_m9m-pfGstrAhw7ri8cI3-NHKrFs2jQG5nJbhXFogXfZkipw6" }
+"your-build-secret-id" = { encrypted = "FSXRT02ouBlR4edBprBiUxgP1ii5_nWLwYQycy0OP1wK0z51ZeclZSIRCEtSAwp3nrqBGh9ckemqb9MYrnAdi6_NxQOoyji1dtZn1qNWQUuf6-4rzVkMtnm0xbbIAAHQpDxwv5sGia9MWnLbEeU0sDJrLNSvGDohixmJgbjhewNzdf86" }
