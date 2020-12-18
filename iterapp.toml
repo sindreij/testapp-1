@@ -6,4 +6,4 @@ emoji="🧪"
 build_in_kubernetes = true
 
 [build_secrets.my-secret]
-"test.txt" = { encrypted = "A0YLKpVCSluBBCwt0eQr-OZp25P28I0LOZyMevJoEB1ocMw70QL9ALlVyjKzR7-JRo9ZycCtjE3PDyWKRFtGvUBUXnzM5qPcjnS_5e3W1HY2eeSMiiLm0bkhX8PunuBbL7Mulrw30tcrQPv9iUaFPRAzDHD5D21WolYKBBtoUKo" }
+"test.txt" = { encrypted = "jecPORaHAPlzpwJANPpFYdxgIi7IBLtK0uajXJyczg_k4n99-IKUwoLMN7Ht43_x_50z6LFANoDA3l4nvz81C5U6_HEe4TBSEx0_SKAJyl37f_dzXhwtJ4C_8_o8Rkm59y-GG2QrR9N7aQGntXpbB0hNKrj6YchUhsWwpPWH4jGtLw" }
