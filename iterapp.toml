@@ -2,6 +2,3 @@ port=80
 readiness_path="/"
 from_to_www_redirect=true
 emoji="🧪"
-
-[build_secrets]
-"my-secret" = { encrypted = "FSXRT02ouBlR4edBprBiUxgP1ii5_nWLwYQycy0OP1wK0z51ZeclZSIRCEtSAwp3nrqBGh9ckemqb9MYrnAdi6_NxQOoyji1dtZn1qNWQUuf6-4rzVkMtnm0xbbIAAHQpDxwv5sGia9MWnLbEeU0sDJrLNSvGDohixmJgbjhewNzdf86" }
