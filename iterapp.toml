@@ -4,4 +4,4 @@ from_to_www_redirect=true
 emoji="🧪"
 
 [build_secrets]
-"my-secret" = { encrypted = "FSXRT02ouBlR4edBprBiUxgP1ii5_nWLwYQycy0OP1wK0z51ZeclZSIRCEtSAwp3nrqBGh9ckemqb9MYrnAdi6_NxQOoyji1dtZn1qNWQUuf6-4rzVkMtnm0xbbIAAHQpDxwv5sGia9MWnLbEeU0sDJrLNSvGDohixmJgbjhewNzdf86" }
+"my-secret" = { encrypted = "eWIKzTW2BsJmFYzTGsxUa8cszWAiEycgnkChII6sjC5BtVcoMb_htPM3OpzHLft8NVDBw38k_x4bON5xHbaMEvHXcf0T2phTTEes5qHIYLTP6OS-GoAYu0vkvQTJ1BuBdBFD5U_iRKX6EKkcZyP_N7wjCyUd2NjrPgC6iDFEKOF87_-cBJRaSYS_u8q9aDs7" }
