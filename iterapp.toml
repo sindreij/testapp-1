@@ -1,4 +1,8 @@
-port=80
-readiness_path="/"
-from_to_www_redirect=true
-emoji="🧪"
+port = 80
+readiness_path = "/"
+from_to_www_redirect = true
+emoji = "🧪"
+
+[[static]]
+local_dir = "/usr/share/nginx/html/static"
+url_path = "/static"
