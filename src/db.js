@@ -1,6 +1,7 @@
 const { Client } = require('pg');
 
 async function connect() {
+    console.log('connecting to db');
     const client = new Client({
         connectionString: process.env.DATABASE_URL,
     });
@@ -11,6 +12,7 @@ async function connect() {
             console.error('database error', err.stack);
         });
     } catch (err) {
+        console.error(err);
         client.end();
         throw err;
     }
