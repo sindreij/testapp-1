@@ -28,12 +28,17 @@ function sleep(ms) {
 async function initDb() {
     // Postgres DB might not be up at the same time our container is up,
     // so we need to retry this a few times
+    console.log('initializing db');
     let retry = 10;
     while (true) {
+        console.log('retrying');
         try {
+            console.log('trying');
             await doInitDb();
+            console.log('success');
             return;
         } catch (err) {
+            console.log('das error');
             console.error(err.message);
             if (retry === 0) {
                 throw err;
