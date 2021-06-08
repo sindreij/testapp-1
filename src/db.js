@@ -50,12 +50,16 @@ async function initDb() {
 }
 
 async function doInitDb() {
+    console.log('connecting');
     let conn = await connect();
+    console.log('got connection');
 
     try {
+        console.log('running query');
         await conn.query(
             'CREATE TABLE IF NOT EXISTS messages (id SERIAL PRIMARY KEY, text VARCHAR NOT NULL)'
         );
+        console.log('finished');
     } finally {
         conn.end();
     }
