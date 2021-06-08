@@ -17,6 +17,7 @@ async function connect() {
         throw err;
     }
 
+    console.log('connected to db');
     return client;
 }
 
@@ -65,12 +66,18 @@ async function postMessage(text) {
 }
 
 async function getMessages() {
+    console.log('aaa');
     let conn = await connect();
+    console.log('bbb');
     try {
+        console.log('ccc');
         let res = await conn.query('SELECT text FROM messages');
+        console.log('ddd');
         return res.rows;
     } finally {
+        console.log('eee');
         conn.end();
+        console.log('fff');
     }
 }
 
