@@ -2,3 +2,7 @@ port=80
 readiness_path="/"
 from_to_www_redirect=true
 emoji="🧪"
+
+[requests]
+memory="98Mi"
+cpu="24m"
